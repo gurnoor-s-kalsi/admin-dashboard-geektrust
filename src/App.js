@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useReducer } from 'react';
+import config from './config';
+import AdminTable from './components/adminTable';
+import performAPICall from './services/data';
+import { userListReducer } from './services/reducer';
 
 function App() {
+
+  const [userList, dispatch] = useReducer(userListReducer, []);
+  
+  function handleInitialization(users){
+    dispatch({
+        type: 'initial',
+        users: users
+    })
+  }
+
+  const getUsers = async () => {
+    const data = await performAPICall(config.BACKEND_URL);
+    console.log(data);
+    handleInitialization(data);
+  }
+
+  useEffect(()=>{
+    getUsers()},[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div>
+        <AdminTable users={userList} dispatch={dispatch} userListReducer={userListReducer}/>
     </div>
   );
 }

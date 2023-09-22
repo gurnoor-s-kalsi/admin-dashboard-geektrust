@@ -1,3 +1,10 @@
+# This project was created for submission to the Geektrust Admin UI challenge 
+
+It uses CRA, Free Icons from [HeroIcons](https://heroicons.com/), UI Components from [HeadlessUI](https://https://headlessui.com/react) and [HyperUI](https://www.hyperui.dev/).
+Package.json contains the (dependencies installed)[file://./package.json].
+Standard npm script budled with CRA are used to get the project up and running.
+Thank you for your consideration.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
