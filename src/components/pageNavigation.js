@@ -25,10 +25,10 @@ function PageNavigation({ users, userList, pageNo, setPageNo }) {
     return (
         <div className="flex flex-row w-full flex-grow justify-center gap-6 my-3">
             <button onClick={() => { if (pageNo != firstPage) setPageNo(firstPage) }} className={"rounded-full p-2 border-2 transition hidden md:block " + (pageNo == firstPage ? "bg-gray-100 text-gray-400 cursor-auto" : "bg-blue-500 text-white")}>
-                <DoubleBackwardArrow/>    
+                <DoubleBackwardArrow className="w-4 h-4"/>    
             </button>
             <button onClick={() => { if (pageNo != firstPage) { setPageNo(pageNo - 1) } }} className={"rounded-full p-2  border-2 transition " + (pageNo == firstPage ? "bg-gray-100 text-gray-400 cursor-auto" :"bg-blue-500  text-white")}>
-                <BackwardArrow/>   
+                <BackwardArrow className="w-4 h-4"/>   
             </button>
 
             {numOfPages.map((i) =>
@@ -43,12 +43,12 @@ function PageNavigation({ users, userList, pageNo, setPageNo }) {
 
             <button onClick={() => { if (pageNo != lastPage) { setPageNo(pageNo + 1) } console.log(pageNo)}}
                 className={"rounded-full p-2 border-2 transition " + (pageNo == lastPage ? "bg-gray-100 text-gray-400" :"bg-blue-500  text-white")}>
-                <ForwardArrow/>
+                <ForwardArrow className="w-4 h-4"/>
             </button>
 
             <button onClick={() => {if(pageNo != lastPage); setPageNo(lastPage) }}
                 className={"rounded-full p-2 border-2 hidden md:block transition " + (pageNo == lastPage ? "bg-gray-100 text-gray-400" : "bg-blue-500  text-white")}>
-                <DoubleForwardArrow/>
+                <DoubleForwardArrow className="w-4 h-4"/>
             </button>
         </div>
     )

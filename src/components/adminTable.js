@@ -47,8 +47,10 @@ function AdminTable( { users, dispatch } ) {
                 {/* <div className={"overflow-x-auto p-6 mx-auto"}> */ }
                 <SearchBar searchTermr={ searchTerm } setSearchTerm={ setSearchTerm } />
                 <Table users={ users } userList={ userList } deleteIds={deleteIds} setDeleteIds={setDeleteIds} pageNo={ pageNo } confirm={ confirm } setConfirm={ setConfirm } setCurrentUser={ setCurrentUser } setEditing={ setEditing } />
-                <div className="flex flex-col md:flex-row w-full m-3">
-                    <button className="border rounded-full flex-shrink-0 text-white bg-red-500 border-box m-3 px-2 text-sm" onClick={_ =>  setConfirm(true) }>Delete Selected</button>
+                <div className="flex flex-col md:flex-row w-full m-3 gap-2">
+                    <div className="flex-shrink-0 flex justify-center">
+                        <button className="border rounded-full text-white bg-red-500 border-box md:m-3 md:px-2 text-sm p-2 max-auto max-w-md" onClick={_ =>  setConfirm(true) }>Delete Selected</button>
+                    </div>
                     <PageNavigation users={ users } userList={ userList } pageNo={ pageNo } setPageNo={ setPageNo } />
                 </div>
             </div>
