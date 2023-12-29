@@ -60,7 +60,7 @@ function Table( { users, userList, pageNo, setConfirm, deleteIds, setDeleteIds, 
 
     return (
 
-        <table className="table-fixed min-w-full divide-y divide-gray-300 bg-white dark:divide-gray-700 dark:bg-gray-900">
+        <table className="table-fixed min-w-full divide-y divide-gray-300 bg-white ">
             <thead className="text-left">
                 <tr>
                     <th className="px-4 py-2 w-1/5">

@@ -43,7 +43,7 @@ function AdminTable( { users, dispatch } ) {
 
     return (
         <>
-            <div className={ "p-6 mx-auto" + ( editing || confirm ? " opacity-50" : "" ) }>
+            <div className={ "p-6 mx-auto " + ( editing || confirm ? " opacity-50" : "" ) }>
                 {/* <div className={"overflow-x-auto p-6 mx-auto"}> */ }
                 <SearchBar searchTermr={ searchTerm } setSearchTerm={ setSearchTerm } />
                 <Table users={ users } userList={ userList } deleteIds={deleteIds} setDeleteIds={setDeleteIds} pageNo={ pageNo } confirm={ confirm } setConfirm={ setConfirm } setCurrentUser={ setCurrentUser } setEditing={ setEditing } />
